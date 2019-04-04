@@ -11,7 +11,7 @@ Este comando nos permite escribir en la consola `git co` en lugar de `git checko
 Podemos crear alias más complejos, que realicen varias acciones a la vez.
 
 ```bash
-git config --global alias lg "log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short"
+git config --global alias lg "!git log --graph --topo-order --date=format:%c --abbrev-commit --decorate --all --pretty=format:'%Cgreen%ad %Cred%h%Creset -%C(yellow)%d%Creset %s %Cblue[%cn]%Creset %Cblue"
 ```
 
 Gracias a este alias, podemos dibujar el grafo de forma visual escribiendo simplemente `git lg`.
