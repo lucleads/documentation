@@ -1,5 +1,7 @@
 # Explicación de las ramas
 
+<img src="/img/workflow.jpg" style="zoom: 70%">
+
 El flujo de trabajo definido por GitFlow cuenta con 5 ramas, cada una de ellas ideada para una función específica:
 
 1. **develop**: La rama principal donde iremos desarrollando el código de nuestra aplicación.
