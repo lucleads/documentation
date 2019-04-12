@@ -21,6 +21,24 @@ $users = $this->Users->get(5);
 
 ## Cargar datos de una tabla distinta a la del controlador actual
 
+### Primera forma: Cargar el modelo
+
+Podemos recoger datos de una tabla distinta a la del controlador actual cargando su modelo.  Para ello, realizamos las siguientes acciones:
+
+```php
+$this->loadModel('promotions');
+```
+
+Esto nos cargará esta información en el controlador para poder trabajar con ella. Para obtener una query sobre la que podemos iterar, utilizamos:
+
+```php
+$this->promotions->find('all')->where(['Promotions.id IN' => $ordersPromoId])->toArray();
+```
+
+Podemos anidar **where** dentro de la consulta, y cualquier otra sintaxis.
+
+### Segunda forma: Cargar TableRegistry
+
 Para crear una variable con datos que obtenemos de una tabla, en primer lugar debemos cargar esta librería en el controlador:
 
 ```php
@@ -62,6 +80,25 @@ $promoInfo = $this->Promotions->get($promoId, [
 ```
 
 Esta consulta nos devuelve únicamente los campos `name` y `price_old` de la promoción con id **$promoId**.
+
+## Cargar datos de una tabla asociada
+
+Si hemos definido en la BD las relaciones de forma adecuada, podemos anidar consultas de forma sencilla en Cake.
+
+Es decir, si hemos creado una tabla Users, y una tabla Pedidos, con una tabla que los relaciona (Pedidos_Users), indicando las claves foráneas etc... podemos realizar de forma simple la siguiente consulta.
+
+```php
+$user = $this->Users->get($id, [
+    'contain' => [
+        'Orders' => [
+            'Promotions',
+            'sort' => ['Orders.id' => 'DESC']
+        ]
+    ]
+]);
+```
+
+Esto nos anida los Pedidos (Orders) que tiene cada Cliente (User), y la información de los Pedidos (Promotions) que contiene cada pedido.
 
 ## Consultas avanzadas
 
