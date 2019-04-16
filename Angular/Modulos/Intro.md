@@ -18,7 +18,7 @@ Las propiedades más importantes que puede contener un módulo son:
 - exports: el subset de declaraciones que deben ser visibles y utilizables por las templates desde otro NgModule.
 - imports: otros módulos necesarios por el actual para generar las templates.
 - providers: servicios que este módulo contribuye a la colección global de la aplicación (están disponibles desde cualquier punto). **Es más recomendable especificar los providers a nivel de componente**.
-- bootstrap: la vista principal. Almacena todas las demás vistas. **Únicamente el módulo raíz debe tener seteada la propiedad bootstrap.**
+- bootstrap: la vista principal. Almacena todas las demás vistas. ==Únicamente el módulo raíz debe tener seteada la propiedad bootstrap==.
 
 ## Ejemplo
 
@@ -43,4 +43,3 @@ export class AppModule { }
 **Un componente y sus plantillas juntas definen una vista**. Es posible también que un componente esté formado por otros, definiendo así una jerarquía.
 
 ![View hierarchy](img/view-hierarchy.png)
-

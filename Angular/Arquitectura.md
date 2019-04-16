@@ -27,6 +27,8 @@ export class AppModule { }
 
 Cualquier aplicación tendrá como mínimo un módulo root (`app.module.ts`) que permite arrancar la aplicación, y normalmente contará también con módulos que implementan más funcionalidades.
 
+![1555405704426](img/1555405704426.png)
+
 ## Componentes
 
 ```js
@@ -34,6 +36,14 @@ Cualquier aplicación tendrá como mínimo un módulo root (`app.module.ts`) que
 ```
 
 Un componente define una clase y contiene la lógica y datos de una parte de la aplicación. También está asociada con un HTML que define su vista.
+
+![1555406295406](img/1555406295406.png)
+
+Como podemos ver tiene tres partes principales:
+
+1. **Imports**: cada una de las piezas que necesitamos para que el componente funcione. Se declaran al principio.
+2. **Decorator**: el selector por el cual nos vamos a referir a este componente, su layout y sus estilos.
+3. **Class**: las funcionalidades que contiene el componente.
 
 La estructura de cualquier componente es:
 
@@ -131,3 +141,5 @@ El módulo `Router` mapea las distintas rutas de la aplicación. Una aplicación
 El Router por defecto de la aplicación se encuentra en `/src/app/app-routing.module.ts`.
 
 ![overview](img/overview2.png)
+
+[Más información sobre Rutas](Rutas/Inicio.md)
