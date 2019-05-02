@@ -16,7 +16,7 @@ Para poder realizar tests, debemos haber configurado dentro de `config/app.php` 
 'test' => [
 	'username' => 'my_app',
 	'password' => 'secret',
-	'database' => 'test_myapp',
+	'database' => 'app_database_test',
     ],
 ```
 
