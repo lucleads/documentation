@@ -14,6 +14,8 @@ Para crear un seed, utilizamos el comando:
 bin/cake bake seed --data <tableName> 
 ```
 
+Si queremos almacenar todos los datos actuales en la BD, debemos ejecutar este comando una vez por cada tabla.
+
 ## Aplicar un seed
 
 Después de aplicar una migración, podemos realizar seed en nuestra BD a través del subcomando `seed`.

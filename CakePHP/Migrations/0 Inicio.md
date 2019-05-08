@@ -20,3 +20,4 @@ Con el siguiente comando podemos generar una copia del estado actual de la BD y 
 bin/cake bake migration_snapshot Nombre
 ```
 
+[Guardar datos actuales de la BD](copia-de-los-datos.md)
