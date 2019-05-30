@@ -14,9 +14,8 @@ La arquitectura ITCSS nos permite **controlar el nivel donde queremos implementa
 2. **Tools**: mixins y funciones.
 3. **Generic**: reset, normalize, animations.
 4. **Elements**: selectores de elementos HTML. Body, Header...
-5. **Objects**: selectores de objetos. Agrupan componentes.
+5. **Objects**: selectores de objetos. Agrupan componentes. Sólo estructura, nada de tema.
 6. **Components**: cada una de las piezas por separado. Selectores id y class.
-7. **Pages**: Estilos específicos de páginas (contact page). *Opcional*.
 8. **Utilities**: addons y complementos. Vendor stylesheets. *Opcional*.
 9. **Trumps**: reglas que deben prevalecer sobre todas las demás. Hacks, Importants. *Opcional*.
 

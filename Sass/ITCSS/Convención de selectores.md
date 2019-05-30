@@ -15,29 +15,30 @@ button {
     padding: 10px;    
     border: 1px solid #000000;
     
-    // 2. Pseudo-elementos.
-	&::before { // }
-	&::after { // }
-    
-    // 3. Atributos.
-	&[type=checkbox] { // }
-        
-	// 4. Pseudo-clases. Estados y selectores de nivel.
-    &:hover { // }
-	&:disabled { // }
-	&:nth-child(1) { // }
-        
-	// 5. Combinators.
-    &+.alert { // }
-	&>.primary { // }
-        
-	// 6. Breakpoints del selector. Cada BP puede repetir el modelo definido hasta aquí.
+    // 2. Breakpoints del selector. Cada BP puede repetir el modelo definido hasta aquí.
     @include bp-mobile { // }
 	@include bp-tablet { // }
 	@include bp-desktop { // }
         
-	// 7. Selectores hijos. Cada selector hijo puede repetir el modelo definido hasta aquí.
+	// 3. Selectores hijos. Cada selector hijo puede repetir el modelo definido hasta aquí.
 	span { // }
+        
+    // 4.1 Pseudo-elementos.
+	&::before { // }
+	&::after { // }
+    
+    // 4.2 Atributos.
+	&[type=checkbox] { // }
+        
+	// 4.3 Pseudo-clases. Estados y selectores de nivel.
+    &:hover { // }
+	&:disabled { // }
+	&:nth-child(1) { // }    
+        
+	// 5. Combinators.
+    &+.alert { // }
+	&>.primary { // } 
+	
 }
 ```
 
@@ -51,6 +52,10 @@ button {
     border-color: black;
     background-color: #ccc;
     opacity: 0.75;
+    
+    span {
+        font-family: 'Roboto';
+    }
 
     &[disabled] {
         opacity: 0.3;
@@ -64,10 +69,6 @@ button {
         background-color: cyan;
     }
     
-    span {
-        font-family: 'Roboto';
-    }
-    
 }
 ```
 
@@ -75,6 +76,10 @@ button {
 a {
     
     text-decoration: underline;
+    
+    @include bp-mobile {
+        font-size: 0.8rem;
+    }
 
     &[href=home] {
         color: blue;
@@ -83,12 +88,9 @@ a {
     &:visited {
         color: red;
     }
+    
     &:nth-of-type(1) {
         font-weight: bold;
-    }
-
-    @include bp-mobile {
-        font-size: 0.8rem;
     }
     
 }

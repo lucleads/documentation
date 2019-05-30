@@ -63,6 +63,34 @@ body p { color: red; }
 
 No es recomendable utilizar esta técnica para revertir selectores, ya que por arquitectura **es mejor anidar el hijo** dentro del selector principal.
 
+Esta técnica puede ser útil en ciertos casos concretos, donde contamos con un selector muy largo anidado, y queramos escribir otro selector que incluya al anterior pero tenga otras características.
+
+Ejemplo:
+
+```scss
+.wrapper {
+    main {
+        h1 {
+            background-color: blue;
+            #contact_page & {
+                background-color: cyan;
+            }
+        }
+    }
+}
+
+/*
+ * Compila como:
+ */
+.wrapper main h1 {
+  background-color: blue;
+}
+
+#contact_page .wrapper main h1 {
+  background-color: cyan;
+}
+```
+
 ### Selector compuesto
 
 Podemos generar selectores combinando el símbolo `&`
