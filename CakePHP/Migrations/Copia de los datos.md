@@ -29,7 +29,7 @@ Si no indicamos ninguna opción, este comando **nos insertará todos los datos d
 SI queremos que haga seed únicamente de una tabla:
 
 ```bash
-bin/cake bake migrations seed <tableName>
+bin/cake migrations seed --seed UsersSeed
 ```
 
 ## Opciones
