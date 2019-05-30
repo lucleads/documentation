@@ -35,3 +35,12 @@ Time: 611 ms, Memory: 4.00 MB
 
 OK (1 test, 1 assertion)
 ```
+
+## Resultados posibles
+
+Los tests tienen cuatro posibles resultados:
+
+1. **Completado** ( . ) : Los tests que aparezcan con este icono han resuelto como OK.
+2. **Erróneo** ( F ) : Los tests que aparezcan con este icono han resuelto como NO OK y debemos corregir el código.
+3. **Saltado** / Skip ( S ) : Los tests que aparezcan con este icono no se han evaluado. Por ejemplo porque dependen del resultado de otro test que se ha resuelto como erróneo.
+4. **Incompleto** ( I ) : Los tests que aparezcan con este icono no han sido completados. Tenemos que terminar de escribirlos.

@@ -28,42 +28,33 @@ Ahora, creamos el script para ejecutar PHPUnit desde la carpeta vendor del proye
 }
 ```
 
-## Archivo de configuración
+Cuando ejecutemos este comando desde composer mediante `composer tests`, nos aparecerá en consola el resultado de los tests que hayamos configurado de la siguiente forma:
 
-Podemos crear un archivo `phpunit.xml` en la raíz del proyecto con la configuración general.
+![Tests](img/tests.png)
 
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<phpunit bootstrap="vendor/autoload.php" colors="true" verbose="true" stopOnFailure="false">
-    <testsuites>
-        <testsuite name="Application Test Suite">
-            <directory>./tests/</directory>
-        </testsuite>
-    </testsuites>
-</phpunit>
+## Argumentos opcionales
+
+Podemos indicar argumentos que facilitan la lectura del resultado de los tests.
+
+```json
+"scripts": {
+	"tests": "phpunit --colors=always --verbose --testdox"
+}
 ```
+El argumento `--testdox` transforma el nombre de los tests a una referencia mucho más descriptiva.
 
-### Logs
+Convierte por ejemplo un test llamado `testPushAndPop` a `Push and pop`.
 
-Dentro del archivo de configuración `phpunit.xml` podemos indicar si queremos que se almacene un registro de los tests que realizamos.
+Convierte nombres escritos en camelCase o en snake_case.
 
-```xml
-<logging>    
-	<log type="testdox-text" target="logs/testdox.txt"/>
-</logging>
-```
 
-El archivo que se genera será parecido a:
 
-```
-Proyecto\tests\Exception
- [ ] Exception
+El argumento `--verbose` hace que podamos ver toda la información disponible sobre los tests fallidos.
 
-Proyecto\tests\First
- [x] True assets to true
- [x] Push and pop
+Estos comandos nos mostrará un resultado mucho más visual:
 
-Proyecto\tests\Fixtures
- [ ] Fixture is empty
-```
+![Tests](img/tests-con-dox.png)
 
+### --debug
+
+Muestra información adicional sobre el orden en el que ejecuta los tests. Indica el inicio y final de cada uno.
