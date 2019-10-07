@@ -2,7 +2,11 @@
 
 [Documentación](<https://sass-lang.com/documentation/file.SASS_REFERENCE.html#variables_>)
 
-Aunque CSS incluye variables (llamadas *custom properties*), estas todavía no son totalmente compatibles con todos los navegadores y todas las versiones. Cuando compilamos un Sass, este modifica todas las ocurrencias de una variable por su valor. ==NO crea variables CSS, sino que asigna el valor de la variable a cada regla donde la utilicemos==
+Aunque CSS incluye variables (llamadas *custom properties*), estas todavía no son totalmente compatibles con todos los navegadores y todas las versiones.
+
+Actualmente, cualquier navegador anterior a 2016 NO es compatible con variables nativas de CSS.
+
+Cuando compilamos un Sass, este modifica todas las ocurrencias de una variable por su valor. ==NO crea variables CSS, sino que compila el valor de la variable a cada regla donde la utilicemos==
 
 ```scss
 /* Ejemplo con Sass

@@ -1,0 +1,22 @@
+:root {
+  --color-primary: #007bff;
+}
+
+body {
+  color: var(--color-primary);
+}
+
+nav {
+  color: #007bff;
+}
+
+main p {
+  color: #28a745;
+}
+main h1 {
+  color: #28a745;
+}
+
+header {
+  margin: calc(8px * 2);
+}

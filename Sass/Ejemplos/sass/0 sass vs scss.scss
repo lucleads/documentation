@@ -1,0 +1,43 @@
+/* Refactorizar esta hoja de estilos a la sintaxis sass */
+
+$size-main: 14px;
+
+$font-family-primary: "Arial";
+$font-family-secondary: "Montserrat";
+
+$color-main: #007bff;
+$color-alert: #dc3545;
+$color-warning: #ffc107;
+$color-success: #28a745;
+$color-bg: #fefefe;
+
+body {
+    font-family: $font-family-primary;
+    font-size: $size-main;
+    background-color: $color-bg;
+    color: $color-main;
+}
+
+h1 {
+    border-bottom: 2px dashed $color-main;
+    font-family: $font-family-secondary;
+    font-size: $size-main * 2;
+    span {
+        background-color: darken($color-main, 20%);
+    }
+}
+
+button {
+    padding: 10px;
+    border: 1px solid $color-main;
+    background-color: lighten($color-main, 20%);
+    &.success {
+        background-color: $color-success;
+    }
+    &.alert {
+        background-color: $color-alert;
+    }
+    &.warning {
+        background-color: $color-warning;
+    }
+}

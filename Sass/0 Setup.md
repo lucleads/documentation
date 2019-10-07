@@ -25,6 +25,8 @@ Esto nos vigilará y compilará automáticamente los archivos de tipo `.scss`
 
 que se encuentren en la carpeta `style/sass` a la carpeta `style/css`
 
+Cuando trabajamos con Sass, **no debemos modificar el archivo css** que se genera, ya que este será sobreescrito cuando compilemos el Sass.
+
 ## Configuración de compilación
 
 Podemos definir ciertas opciones de compilación para generar el archivo CSS.
@@ -40,6 +42,8 @@ sass --watch style/sass:style/main --style=compressed
 
 ### Generar mapa de fuentes
 
+Los mapas de fuentes nos permiten identificar en qué partial está cada regla css.
+
 ==Para que funcionen los sourceMaps en Chrome, debemos lanzar nuestra web desde un servidor web.==
 
 ```scss
@@ -51,4 +55,3 @@ Por defecto está habilitado. Pero si queremos generar una hoja de estilos para 
 ```scss
 sass --watch style/sass:style/main --no-source-map --style=compressed
 ```
-

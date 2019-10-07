@@ -1,0 +1,38 @@
+// Variable nativa de CSS (custom properties)
+:root {
+    --color-primary: #007bff;
+}
+
+body {
+    color: var(--color-primary);
+}
+
+// Variable de Sass
+$color-primary: #007bff;
+
+nav {
+    color: $color-primary;
+}
+
+// Ámbito de las variables
+main {
+    $color-primary: #28a745;
+    $font-size: 14px;
+    p {
+        color: $color-primary;
+    }
+    h1 {
+        color: $color-primary;
+    }
+}
+
+// Error de compilación. Undefined variable
+footer {
+    // font-size: $font-size;
+}
+
+// Interpolación
+$padding: 8px;
+header {
+    margin: calc(#{$padding} * 2);
+}

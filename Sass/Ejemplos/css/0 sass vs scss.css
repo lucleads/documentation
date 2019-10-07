@@ -1,0 +1,31 @@
+/* Refactorizar esta hoja de estilos a la sintaxis sass */
+body {
+  font-family: "Arial";
+  font-size: 14px;
+  background-color: #fefefe;
+  color: #007bff;
+}
+
+h1 {
+  border-bottom: 2px dashed #007bff;
+  font-family: "Montserrat";
+  font-size: 28px;
+}
+h1 span {
+  background-color: #004a99;
+}
+
+button {
+  padding: 10px;
+  border: 1px solid #007bff;
+  background-color: #66b0ff;
+}
+button.success {
+  background-color: #28a745;
+}
+button.alert {
+  background-color: #dc3545;
+}
+button.warning {
+  background-color: #ffc107;
+}
